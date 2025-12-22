@@ -1,0 +1,101 @@
+# Swipe Navigation Between Locations - Implementation Guide
+
+## ✅ **What We're Building**
+
+Add swipe navigation to the home screen so users can swipe left/right to view weather for different saved locations.
+
+## 📦 **Package Installed**
+
+```bash
+npx expo install react-native-pager-view
+```
+
+## 🎯 **Implementation Steps**
+
+### **1. Import PagerView**
+
+```tsx
+import PagerView from 'react-native-pager-view';
+```
+
+### **2. Wrap Content in PagerView**
+
+Instead of showing weather for one location, create a page for each saved location:
+
+```tsx
+<PagerView
+  style={{ flex: 1 }}
+  initialPage={currentLocationIndex}
+  onPageSelected={(e) => setCurrentLocationIndex(e.nativeEvent.position)}
+>
+  {savedLocations.map((location, index) => (
+    <View key={location.id} style={{ flex: 1 }}>
+      <ScrollView>
+        {/* Weather content for this location */}
+      </ScrollView>
+    </View>
+  ))}
+</PagerView>
+```
+
+### **3. Load Weather for Each Location**
+
+Create a function to fetch weather for a specific location:
+
+```tsx
+const loadWeatherForLocation = async (location: SavedLocation) => {
+  // Fetch weather using location.lat, location.lon
+};
+```
+
+### **4. Add Location Dots Indicator**
+
+Show dots at the bottom to indicate which location is active:
+
+```tsx
+<View style={styles.dotsContainer}>
+  {savedLocations.map((_, index) => (
+    <View
+      key={index}
+      style={[
+        styles.dot,
+        index === currentLocationIndex && styles.activeDot
+      ]}
+    />
+  ))}
+</View>
+```
+
+### **5. Styles**
+
+```tsx
+dotsContainer: {
+  flexDirection: 'row',
+  justifyContent: 'center',
+  paddingVertical: 12,
+  gap: 8,
+},
+dot: {
+  width: 8,
+  height: 8,
+  borderRadius: 4,
+  backgroundColor: 'rgba(255, 255, 255, 0.4)',
+},
+activeDot: {
+  backgroundColor: '#FFFFFF',
+  width: 24,
+},
+```
+
+## 🚀 **Benefits**
+
+- ✅ Swipe between saved locations
+- ✅ Visual indicator of current location
+- ✅ Smooth animations
+- ✅ Native feel
+
+## 📝 **Note**
+
+This requires refactoring the home screen to support multiple weather data objects (one per location) instead of just the current location's weather.
+
+**Would you like me to implement this now?** 🎯
