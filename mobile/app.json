@@ -38,7 +38,7 @@
       "typedRoutes": true
     },
     "extra": {
-      "EXPO_PUBLIC_API_URL": "http://172.168.65.193:8000"
+      "EXPO_PUBLIC_API_URL": "https://weather-alert-system-production.up.railway.app"
     }
   }
 }
