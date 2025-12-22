@@ -13,7 +13,7 @@ import {
     Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import MapView, { Marker, Circle, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Marker, Circle } from 'react-native-maps';
 import { useTheme } from '../contexts/ThemeContext';
 import { disasterApi } from '../services/api';
 import * as Clipboard from 'expo-clipboard';
@@ -162,7 +162,6 @@ export default function GlobalDisasterMap() {
         <View style={styles.container}>
             {/* Map */}
             <MapView
-                provider={PROVIDER_GOOGLE}
                 style={styles.map}
                 initialRegion={{
                     latitude: 20,
