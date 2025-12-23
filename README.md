@@ -4,7 +4,7 @@ A comprehensive weather monitoring and disaster alert mobile application with re
 
 ## Features
 
-### 🌤️ Weather Monitoring
+### Weather Monitoring
 - Real-time weather data from OpenWeatherMap
 - 24-hour hourly forecast
 - 7-day daily forecast
@@ -12,25 +12,25 @@ A comprehensive weather monitoring and disaster alert mobile application with re
 - Beautiful weather animations
 - Dark/Light theme support
 
-### ⚠️ Smart Alerts
+### Smart Alerts
 - Context-aware weather alerts for 5 user types:
-  - 👨‍🌾 Farmer
-  - 🎓 Student
-  - ✈️ Traveler
-  - 🚚 Delivery Worker
-  - 👤 General
+  -  Farmer
+  -  Student
+  -  Traveler
+  -  Delivery Worker
+  -  General
 - Custom alert thresholds
 - Alert history with automatic cleanup
 - Push notifications
 
-### 🌍 Disaster Monitoring
+###  Disaster Monitoring
 - Real-time earthquake alerts (USGS)
 - Tsunami warnings
 - Interactive global disaster map
 - Location-based filtering
 - Detailed event information
 
-### 👤 User Management
+###  User Management
 - Firebase Authentication
 - Google Sign-In support
 - User-specific data isolation
@@ -156,4 +156,4 @@ For issues or questions, please open a GitHub issue.
 
 ---
 
-**Built with ❤️ using FastAPI and React Native**
+**Built with using FastAPI and React Native**
