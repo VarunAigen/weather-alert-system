@@ -66,7 +66,7 @@ export const LocationPicker: React.FC<LocationPickerProps> = ({
         try {
             setLoading(true);
             // Use OpenWeatherMap Geocoding API
-            const API_KEY = process.env.EXPO_PUBLIC_OPENWEATHER_API_KEY || 'd25f90257d1d899b1dd78b8a792a3d98';
+            const API_KEY = process.env.Api_key
             const response = await fetch(
                 `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(query)}&limit=20&appid=${API_KEY}`
             );
